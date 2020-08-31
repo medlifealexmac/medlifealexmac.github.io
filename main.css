@@ -7,7 +7,35 @@ html {
     overflow-x: hidden;
 }
 
+img {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;      /*  <--fixes problem w/ logo becoming blurry when screen is minimized*/
+  }
+
 /** navigation(header)*/
+.navdd {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f1e7df;
+    margin: 0;
+    padding: 0;
+}
+
+.smolnavdd {
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f1e7df;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
 .logocr {
     width: 100%;
 }
@@ -30,7 +58,30 @@ html {
     position: relative;
 }
 
+.navtohome {
+    width: 100%;
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+}
+
+#navpic {
+    width: 20%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+#smolnavpic {
+    display: none;
+    width: 35%;
+    justify-content: space-evenly;
+    position: relative;
+}
+
 .navitems {
+    text-decoration: none;
     font-weight: bold;
     text-align: center;
     font-size: 24pt;
@@ -65,9 +116,74 @@ html {
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .navitems {text-decoration: none; color: rgb(172, 0, 0); align-items: center;} 
 
+    /**button*/
+.navbutton {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 30px;
+    left: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    #navcontainer {
+        align-items: flex-start;
+    }
+
+    .navbutton {
+        display: inline-block;
+        
+    }
+
+    .navdd{
+        display: none;
+    }
+
+    #navpic {
+        display: none;
+    }
+
+    #smolnavpic{
+        display: inline-block;
+    }
+
+    .dropdown {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navtohome {
+        display: flex;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #1d2e3b;
+    }
+
+    #navcontainer:hover .bar1, #navcontainer:hover .bar2, #navcontainer:hover .bar3 {background-color: rgb(172, 0, 0);}
+    #navcontainer:hover .navdd {display: inline-flex; flex-direction: column;}
+    .dropdown:hover .dropdown-content {display: block; position: relative; transform: translate(0, 0); width: 100%; text-align: center;}
+    .dropdown:hover .navitems {width: 100%; color: #d47800;} 
+    .navtohome:hover .navitems {text-decoration: none; color: #d47800;} 
+}
+
 /** body page */
 .norm {
     padding: 60px;
+}
+
+.imgg {
+    width: 100%;
 }
 
 /** default heading */
