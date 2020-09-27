@@ -202,6 +202,12 @@ img {
     background-size: cover;
 }
 
+@media screen and (max-width: 768px) {
+    .full_img {
+        height: 50%;
+    }
+}
+
 .norm {
     padding-left: 10%;
     padding-right: 10%;
