@@ -7,6 +7,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    height: 100%;
+}
+
 img {
     image-rendering: auto;
     image-rendering: crisp-edges;
@@ -133,6 +137,19 @@ img {
     margin: 6px 0;
     transition: 0.4s;
 }
+      
+/*.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+      
+.change .bar2 {opacity: 0;}
+      
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+*/
 
 @media screen and (max-width: 768px) {
     #navcontainer {
@@ -178,12 +195,23 @@ img {
 }
 
 /** body page */
-.norm {
-    padding: 60px;
+.full_img {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.imgg {
-    width: 100%;
+.norm {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: black;
 }
 
 /** default heading */
@@ -195,6 +223,7 @@ h1 b{
 
 .lineunderhead{
     font-size: 0;
+    padding-bottom: 25px;
 }
 
 .headingline {
