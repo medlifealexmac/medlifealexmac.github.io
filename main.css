@@ -11,10 +11,10 @@ body {
     height: 100%;
 }
 
-img {
+/*img {
     image-rendering: auto;
     image-rendering: crisp-edges;
-    image-rendering: pixelated;      /*  <--fixes problem w/ logo becoming blurry when screen is minimized*/
+    image-rendering: pixelated;      
   }
 
 /** navigation(header)*/
